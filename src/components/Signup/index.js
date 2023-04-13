@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import * as C from './styles';
+import { toast } from 'react-toastify';
 
 
 import Input from '../../components/Input/index'
@@ -35,7 +36,7 @@ function Signup() {
           return;
         }
     
-        alert("Usuário cadatrado com sucesso!");
+        toast.success("Usuário cadatrado com sucesso!");
         navigate("/");
       };
 
@@ -46,23 +47,18 @@ function Signup() {
                 <Input
                     type="email"
                     placeholder="Digite seu email"
-                
-
                     value={email}
                     onChange={(e) => [setEmail(e.target.value), setError("")]}
                 />
                 <Input
                     type="email"
                     placeholder="Confirme seu E-mail"
-                    autocomplete="current-password"
-
                     value={emailConf}
                     onChange={(e) => [setEmailConf(e.target.value), setError("")]}
                 />
                 <Input
                     type="password"
                     autoComplete="false"
-                    autocomplete="current-password"
                     placeholder="Digite sua Senha"
                     value={senha}
                     onChange={(e) => [setSenha(e.target.value), setError("")]}

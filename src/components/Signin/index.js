@@ -3,6 +3,8 @@ import * as C from './styles';
 
 import Input from '../../components/Input/index'
 import Button from '../../components/Button/index'
+import { toast } from 'react-toastify';
+
 
 import { Link, useNavigate } from 'react-router-dom';
 import useAuth from '../../hooks/userAuth';
@@ -19,6 +21,7 @@ const Signin = () => {
     const handleLogin = () => {
         if (!email | !senha) {
             setError("Preencha todos os campos");
+            toast.warn("preencha todos os campos")
             return;
         }
 
@@ -34,7 +37,7 @@ const Signin = () => {
 
     return (
         <C.Container>
-            <C.Label>SISTEMA DE LOGIN</C.Label>
+            <C.Label>SISTEMA DE LOGINn</C.Label>
             <C.Form>
                 <Input
                     type="email"

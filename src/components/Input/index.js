@@ -5,7 +5,6 @@ const Input = ({ type, placeholder, value, onChange }) => {
 
         <C.Input
             value={value}
-            autocomplete="current-password"
             onChange={onChange}
             type={type}
             placeholder={placeholder}

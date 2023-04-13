@@ -1,14 +1,16 @@
+import React from 'react';
 import * as C from './styles';
 
-const Button = ({Text, onclick, Type = "button"}) => {
+const Button = ({ Text, onClick, Type = "button" }) => {
     return (
-        <C.Button type={Type} onclick={onclick}>
+        <C.Button type={Type} onClick={onClick} >
             {Text}
         </C.Button>
-
     )
 }
 
 export default Button;
 
 // colocar os toast 
+
+
