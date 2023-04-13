@@ -1,4 +1,3 @@
-import './App.css';
 import { AuthProvider } from './context/auth';
 import RoutesApp from './routes';
 import GlobalStyle from './styles/global';

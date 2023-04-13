@@ -9,4 +9,6 @@ const Button = ({Text, onclick, Type = "button"}) => {
     )
 }
 
+export default Button;
+
 // colocar os toast 

@@ -4,9 +4,10 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "../components/Home";
 import Signin from "../components/Signin";
 import Signup from "../components/Signup";
+import useAuth from "../hooks/userAuth";
 
 const Private = ({Item}) => {
-    const signed = false;
+    const { signed } = useAuth();
 
     return signed > 0 ? <Item /> : <Signin />
 }
